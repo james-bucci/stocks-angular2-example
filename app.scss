@@ -1,0 +1,210 @@
+$color-white: #FFFFFF;
+$color-blue:  #23629F;
+$color-black: #000000;
+
+@mixin component {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('static/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('static/fonts/MaterialIcons-Regular.eot');
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('static/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('static/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('static/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 1rem;
+  clear: both;
+  color: #888;
+}
+
+ul {
+  list-style: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 100%;
+    overflow: auto;
+  }
+}
+
+label {
+  margin-bottom: 0.15rem;
+  font-weight: 500;
+}
+
+input, textarea, select {
+
+  &.form-control, &.form-control:focus {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &.edit-on-focus {
+    line-height: 1rem;
+    height: auto;
+    border: 0;
+    padding: 0.15rem 1rem;
+    border-bottom: 2px solid $color-white;
+    cursor: pointer;
+  }
+
+  &.edit-on-focus:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.edit-on-focus:focus {
+    background-color: $color-white;
+    border-bottom: 2px solid $color-blue;
+    cursor: text;
+  }
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.row {
+  clear: both;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-default {
+  background-color: #f2f2f2;
+  color: #666;
+  border: 0;
+  font-weight: bold;
+}
+
+.table, .table-condensed, {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #E6E7E8;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  thead, tbody {
+    border: 0;
+  }
+
+  th {
+    text-align: left;
+    background-color: #F7F7F7;
+    border: 1px solid #E6E7E8;
+    font-weight: 400;
+    line-height: 1.75rem;
+    padding: 0 0.5rem;
+  }
+
+  tbody > tr > td {
+    border: 1px solid #E6E7E8;
+    text-align: left;
+    line-height: 1.75rem;
+    padding: 0 0.5rem;
+    vertical-align: middle;
+
+    &.paddingless {
+      padding: 0;
+    }
+
+    span {
+      text-overflow:ellipsis;
+      overflow:hidden;
+      white-space:nowrap;
+      display: block;
+    }
+  }
+
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.component-content {
+  padding-top: 1rem;
+}
