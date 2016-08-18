@@ -1,0 +1,6 @@
+<input type="text" placeholder="Enter ticker (APPL)" (keyup.enter)="search()" [(ngModel)]="searchTerm">
+<ul>
+  <li *ngFor="let stock of stocks">
+    <stock [stock]="stock"></stock>
+  </li>
+</ul>
