@@ -208,3 +208,13 @@ input, textarea, select {
 .component-content {
   padding-top: 1rem;
 }
+
+.list-group {
+  width: 40rem;
+  margin: 0 auto;
+
+  li.list-group-item {
+    overflow: hidden;
+
+  }
+}

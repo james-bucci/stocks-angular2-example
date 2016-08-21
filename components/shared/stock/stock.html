@@ -1,4 +1,14 @@
-{{stock.ticker}}
-{{stock.name}}
-{{stock.currentChange}}
-{{stock.currentChangePct}}
+<div>
+  <span class="ticker">
+    {{stock.ticker}}
+  </span>
+  <span class="name">
+    {{stock.name}}
+  </span>
+  <span class="currentPrice" [ngClass]="{ green: isGreen(), red: isRed() }">
+    {{stock.currentPrice}}
+  </span>
+  <span class="currentPricePct" [ngClass]="{ green: isGreen(), red: isRed() }">
+    {{stock.currentChangePct}}
+  </span>
+</div>

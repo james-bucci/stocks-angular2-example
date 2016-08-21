@@ -1,6 +1,6 @@
 <input type="text" placeholder="Enter ticker (APPL)" (keyup.enter)="search()" [(ngModel)]="searchTerm">
-<ul>
-  <li *ngFor="let stock of stocks">
-    <stock [stock]="stock"></stock>
+<ul class="list-group">
+  <li *ngFor="let stock of stocks" class="list-group-item">
+    <stock [stock]="stock" (click)="remove(stock)"></stock>
   </li>
 </ul>
