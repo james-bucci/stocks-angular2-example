@@ -11,17 +11,8 @@ export class StockService {
   }
 
   public async get(ticker: string) {
-    let url = this.getTickerUrl(ticker);
-    let res = await this.http.get(url).toPromise();
-
-    let data = res.json().query.results.quote;
-
-    let stock = new Stock(data.symbol);
-    stock.name = data.Name;
-    stock.currentPrice = data.Bid;
-    stock.currentChangePct = data.Change;
-    stock.currentVolume = data.Volume;
-    return stock;
+    let data = (await this.http.get(this.getTickerUrl(ticker)).toPromise()).json().query.results.quote;
+    return new Stock(ticker, data);
   }
 
   private getTickerUrl(ticker: string) {

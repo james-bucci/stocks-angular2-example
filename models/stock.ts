@@ -5,7 +5,15 @@ export class Stock {
   public currentChangePct: number;
   public currentVolume: number;
 
-  public constructor(ticker: string) {
+  public constructor(ticker: string, data: any) {
     this.ticker = ticker;
+    
+    if (data) {
+        this.name = data.Name;
+        this.currentPrice = data.LastTradePriceOnly;
+        this.currentChangePct = data.Change;
+        this.currentVolume = data.Volume;
+    }
   }
+  
 }
