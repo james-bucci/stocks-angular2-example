@@ -1,8 +1,6 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Observable } from 'rxjs/Rx';
-
 import { Stock } from "../../../models/_models";
-
 import { StockService } from "../../../services/stock.service";
 
 @Component({

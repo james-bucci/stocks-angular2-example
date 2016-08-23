@@ -1,6 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http';
-
 import { Stock } from "../models/stock";
 
 @Injectable()

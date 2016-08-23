@@ -1,9 +1,6 @@
 import { Component } from "@angular/core";
-
 import { Stock } from "../../../models/_models";
-
 import { StockComponent } from "../stock/stock.component";
-
 import { StockService } from "../../../services/stock.service";
 
 @Component({
@@ -30,9 +27,6 @@ export class StockListComponent {
     this.searchTerm = null;
   }
 
-  public remove(stock) {
-    
-  }
 }
 
 import "./stock-list.html";
